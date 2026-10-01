@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f5f3ee;
+  --surface: #ffffff;
+  --surface-2: #faf9f6;
+  --border: #e7e2d8;
+  --text: #101828;
+  --muted: #667085;
+  --primary: #101828;
+  --primary-soft: #e7e2d8;
+  --prosecutor: #f04452;
+  --defender: #2e90fa;
+  --judge: #12b76a;
+  --warning: #dc6803;
+  --danger: #d92d20;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+}

@@ -1,0 +1,12 @@
+# Isolated Python runner image. Execution engine is not wired in Phase 0.
+# Future: non-root user, no network, CPU/memory/PID limits applied at `docker run`.
+
+FROM python:3.12-slim
+
+RUN useradd --create-home --uid 1000 sandbox \
+    && pip install --no-cache-dir pytest
+
+WORKDIR /workspace
+USER sandbox
+
+CMD ["python", "-c", "print('sandbox image placeholder — runner not implemented')"]
